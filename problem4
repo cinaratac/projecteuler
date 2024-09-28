@@ -1,0 +1,28 @@
+//Find the largest palindrome made from the product of two 3-digit numbers
+#include <iostream>
+	using namespace std;
+
+	int polindrommu(int sayi) {
+		
+		int orjinal = sayi;
+		int ters = 0;
+		while (sayi > 0) {
+			ters = ters * 10 + (sayi % 10);
+			sayi /= 10;
+		}
+		
+		return orjinal == ters;
+	}
+
+	int main() {
+		int enbuyukpolindrom = 0;
+		for (int i = 100; i < 1000; i++) {
+			for (int j = 100; j < 1000; j++) {
+				int carpim = i * j;
+				if (polindrommu(carpim)) {
+					enbuyukpolindrom = carpim;
+				}
+			}
+		}
+		cout << "En büyük polindrom:" << enbuyukpolindrom << endl;
+	}
