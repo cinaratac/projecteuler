@@ -1,5 +1,4 @@
-//en büyük asal sayı bul
-#include <iostream>
+	#include <iostream>
 	using namespace std;
 
 	int enbuyukasalcarpan(int n) {
@@ -9,17 +8,20 @@
 			enbuyuk = 2;
 			n /= 2;
 		}
-		for (int i = 3; i * i<=n; i += 2) {
+		for (int i = 3; i<n; i += 2) {
 			while (n % i == 0) {
 				enbuyuk = i;
 				n /= i;	
 			}
 		}
+		if (n > 2) {
+			enbuyuk = n;
+		}
 		return enbuyuk;
 
 	}
-	int main() {              
-		int sayi = 600851475143;
+	int main() {
+		int sayi = 34;
 		int enbuyuk = enbuyukasalcarpan(sayi);
 		cout<<"En buyuk asal carpan:" << enbuyuk << endl;
 
