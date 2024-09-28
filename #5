@@ -1,0 +1,27 @@
+//1den 20 ye kadar olan sayıların ekokunu hesaplama
+#include <iostream>
+using namespace std;
+
+int ebob(int a, int b) {
+	while (b != 0) {
+		int temp = b;
+		b = a % b;
+		a = temp;
+	}
+	return a;
+}
+int ekok(int a, int b) {
+	return (a * b) / ebob(a, b);
+}
+
+int enkucukortakkat(int n) {
+	int sonuc = 1;
+	for (int i = 2; i < n; i++) {
+		sonuc = ekok(sonuc, i);
+	}
+	return sonuc;
+}
+int main() {
+	int n = 10;
+	cout << "1 den " << n << "' e kadar olan sayıların ekoku:" << enkucukortakkat(n) << endl;
+}
