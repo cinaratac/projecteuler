@@ -1,4 +1,5 @@
-﻿#include <iostream>
+// 1000'den küçük olan 3 veya 5'in katlarının toplamını bulun.
+#include <iostream>
 
 using namespace std;
 
