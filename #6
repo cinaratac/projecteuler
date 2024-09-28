@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int karelertoplamı(int n) {
+	int sonuc;
+	int sonuc2=0;
+	for (int i = 1; i <= n; i++) {
+		sonuc = i * i;
+		sonuc2 += sonuc;
+	}return sonuc2;
+}
+int toplamınkaresi(int n) {
+	int sum=0;
+	int sum2;
+	for (int j = 1; j <= n; j++) {
+		sum += j;
+		sum2 = sum * sum;
+	}return sum2;
+}
+int farkhesaplama(int n) {
+	return -(karelertoplamı(n) - toplamınkaresi(n));
+}
+int main() {
+	int n = 100;
+	cout << "İlk yüz doğal sayının karelerinin toplamı ile toplamının karesi arasındaki fark:" << farkhesaplama(n);
+}
