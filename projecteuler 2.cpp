@@ -1,4 +1,5 @@
-﻿#include <iostream>
+//Fibonacci dizisindeki değerleri dört milyonu aşmayan terimleri ele alarak, çift değerli terimlerin toplamını bulunuz.
+#include <iostream>
 #include <vector>
 using namespace std;
 
