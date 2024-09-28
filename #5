@@ -16,7 +16,7 @@ int ekok(int a, int b) {
 
 int enkucukortakkat(int n) {
 	int sonuc = 1;
-	for (int i = 2; i < n; i++) {
+	for (int i = 2; i <= n; i++) {
 		sonuc = ekok(sonuc, i);
 	}
 	return sonuc;
