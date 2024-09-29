@@ -3,7 +3,7 @@
 using namespace std;
 
 bool karekontrol(int a, int b, int c) {
-	if(a* a + b * b == c * c) return true;
+	if (a * a + b * b == c * c) return true;
 	return false;
 
 }
@@ -15,10 +15,12 @@ int main() {
 				if (a + b + c == 1000) {
 					if (karekontrol(a, b, c)) {
 						cout << "Cevap:" << "a" << a << "b" << b << "c" << c << endl;
+						cout << a * b * c << endl;
 					}
 				}
 			}
 		}
 	}
-
+	
+	
 }
