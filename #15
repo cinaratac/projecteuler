@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int faktoriel(int n){
+	int sonuc = 1; 
+	for (int i = 1; i <= n; i++) {
+		sonuc *= i;
+	}
+	return sonuc;
+}
+
+int main() {
+	int a = 20;
+	int yolsayısı = faktoriel(a * 2) / (faktoriel(a) * faktoriel(a));
+	cout << a << "x" << a << "'lık bir düzlemde gidebileceğiniz toplam yol sayısı: " << yolsayısı << endl;
+}
