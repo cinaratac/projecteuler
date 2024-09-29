@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool karekontrol(int a, int b, int c) {
+	if(a* a + b * b == c * c) return true;
+	return false;
+
+}
+
+int main() {
+	for (int c = 1; c < 1000; c++) {
+		for (int b = 1; b < c; b++) {
+			for (int a = 1; a < b; a++) {
+				if (a + b + c == 1000) {
+					if (karekontrol(a, b, c)) {
+						cout << "Cevap:" << "a" << a << "b" << b << "c" << c << endl;
+					}
+				}
+			}
+		}
+	}
+
+}
