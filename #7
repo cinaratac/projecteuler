@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+bool asalmı(int n) {
+	for (int i = 2; i*i <= n; i++) {
+		if (n % i == 0) return false;
+		
+	}
+	return true;
+	
+}
+
+int main() {
+	int a = 10001;
+	int dizi[10002];
+	int sayac=0;
+	int sayi=2;
+	while (sayac < a) {
+		if (asalmı(sayi)) {
+			dizi[sayac] = sayi;
+			sayac++;
+		}
+		sayi++;
+	}
+
+
+
+	cout << "10001. ASAL SAYI:" << dizi[10000];
+}
