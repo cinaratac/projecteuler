@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int collatzsayısi(int n) {
+	int sayac = 1;
+	while (n != 1) {
+		if (n % 2 == 0) {
+			n = n / 2;
+		}
+		else {
+			n = (n * 3) + 1;
+				}
+		sayac++;
+	}
+	return sayac;
+}
+
+int main() {
+	int max=0;
+	int maxzincir=0;
+
+	for (int n = 1; n < 1000000; n++) {
+		if (collatzsayısi(n) > maxzincir) {
+			maxzincir=collatzsayısi(n);
+			max = n;
+		}
+	}
+	cout << "En uzun Collatz dizisi " << max << " sayısındadır ve " << maxzincir << " terim içerir." << endl;
+
+}
