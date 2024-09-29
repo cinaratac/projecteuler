@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+
+int bölenhesaplama(int n) {
+    int sayac=0;
+    for (int i = 1  ; i * i <= n; i++) {
+        if (n % i == 0) {
+            sayac += 2;
+        }
+        if (i * i == n) sayac--;
+    }
+    return sayac;
+}
+
+int main() {
+    int n = 1;
+    
+    while (true) {
+        int ucgensayı = n * (n + 1) / 2;
+        if (bölenhesaplama(ucgensayı) > 500) {
+            cout << "İlk 500 böleni olan en küçük üçgen sayı: " << n << endl;
+            break;
+        }n++;
+        }
+        
+    }
